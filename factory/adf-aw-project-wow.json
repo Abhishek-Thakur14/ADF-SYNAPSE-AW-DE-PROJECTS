@@ -1,0 +1,9 @@
+{
+	"name": "adf-aw-project-wow",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "03ed0301-733b-4e03-a06f-dc634826616d",
+		"tenantId": "05ac296b-2e61-48e0-bb0c-735bc62b323f"
+	}
+}
