@@ -1,0 +1,17 @@
+{
+	"name": "Create Views Gold",
+	"properties": {
+		"content": {
+			"query": "------------------------\n-- CREATE VIEW CALENDAR\n------------------------\nCREATE VIEW gold.calendar\nAS\nSELECT \n    * \nFROM \n    OPENROWSET\n        (\n            BULK 'https://awstoragedatalake1.blob.core.windows.net/silver/AdventureWorks_Calendar/',\n            FORMAT = 'PARQUET'\n        ) as QUER1\n\n------------------------\n-- CREATE VIEW PRODUCTS\n------------------------\nCREATE VIEW gold.products\nAS\nSELECT \n    * \nFROM \n    OPENROWSET\n        (\n            BULK 'https://awstoragedatalake1.blob.core.windows.net/silver/AdventureWorks_Products/',\n            FORMAT = 'PARQUET'\n        ) as QUER1\n\n\n------------------------\n-- CREATE VIEW RETURNS\n------------------------\nCREATE VIEW gold.returns\nAS\nSELECT \n    * \nFROM \n    OPENROWSET\n        (\n            BULK 'https://awstoragedatalake1.blob.core.windows.net/silver/AdventureWorks_Returns/',\n            FORMAT = 'PARQUET'\n        ) as QUER1\n\n\n------------------------\n-- CREATE VIEW SALES\n------------------------\nCREATE VIEW gold.sales\nAS\nSELECT \n    * \nFROM \n    OPENROWSET\n        (\n            BULK 'https://awstoragedatalake1.blob.core.windows.net/silver/AdventureWorks_Sales/',\n            FORMAT = 'PARQUET'\n        ) as QUER1\n\n\n------------------------\n-- CREATE VIEW SUBCAT\n------------------------\nCREATE VIEW gold.subcat\nAS\nSELECT \n    * \nFROM \n    OPENROWSET\n        (\n            BULK 'https://awstoragedatalake1.blob.core.windows.net/silver/AdventureWorks_SUbCategories/',\n            FORMAT = 'PARQUET'\n        ) as QUER1\n\n\n\n------------------------\n-- CREATE VIEW TERRITORIES\n------------------------\nCREATE VIEW gold.territories\nAS\nSELECT \n    * \nFROM \n    OPENROWSET\n        (\n            BULK 'https://awstoragedatalake1.blob.core.windows.net/silver/AdventureWorks_Territories/',\n            FORMAT = 'PARQUET'\n        ) as QUER1\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "awdatabase",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
